@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#086e2a" />
+    <link rel="stylesheet icon" href="icons/icon.png" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script src="app.js"></script>
+    <title>Conversor</title>
+    <style>
+      #instalar {
+        position: fixed;
+        left: 85%;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a id="instalar" href="#" class="btn btn-light"
+              >Instalar aplicación</a
+            >
+            <a id="instalarNotificaciones" href="#" class="btn btn-light"
+              >Recibir notificaciones</a
+            >
+          </div>
+        </div>
+        <section class="row mt-5">
+          <div class="col-6 aplicacion">
+            <div class="title text-center"><h1>Bienvenido!!!</h1></div>
+            <div class="information">
+              <p class="text-justify" id="descripcion">
+                Use nuestra calculadora para convertir una moneda(divisa) a otra
+                usando los tipos de cambio más recientes.
+                <a href="conversion.html">Probar sin internet</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <form>
+              <div class="row">
+                <div class="col-12">
+                  <legend class="form-name">Conversor de moneda</legend>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label">Cantidad</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="0"
+                      id="cantidad"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="mi_moneda" class="form-label">Moneda</label>
+                    <select id="mi_moneda" class="form-select">
+                      <option value="AED">AED</option>
+                      <option value="ARS">ARS</option>
+                      <option value="AUD">AUD</option>
+                      <option value="BGN">BGN</option>
+                      <option value="BRL">BRL</option>
+                      <option value="BSD">BSD</option>
+                      <option value="CAD">CAD</option>
+                      <option value="CHF">CHF</option>
+                      <option value="CLP">CLP</option>
+                      <option value="CNY">CNY</option>
+                      <option value="COP">COP</option>
+                      <option value="CZK">CZK</option>
+                      <option value="DKK">DKK</option>
+                      <option value="DOP">DOP</option>
+                      <option value="EGP">EGP</option>
+                      <option value="EUR">EUR</option>
+                      <option value="FJD">FJD</option>
+                      <option value="GBP">GBP</option>
+                      <option value="GTQ">GTQ</option>
+                      <option value="HKD">HKD</option>
+                      <option value="HRK">HRK</option>
+                      <option value="HUF">HUF</option>
+                      <option value="IDR">IDR</option>
+                      <option value="ILS">ILS</option>
+                      <option value="INR">INR</option>
+                      <option value="ISK">ISK</option>
+                      <option value="JPY">JPY</option>
+                      <option value="KRW">KRW</option>
+                      <option value="KZT">KZT</option>
+                      <option value="MXN" selected>MXN</option>
+                      <option value="MYR">MYR</option>
+                      <option value="NOK">NOK</option>
+                      <option value="NZD">NZD</option>
+                      <option value="PAB">PAB</option>
+                      <option value="PEN">PEN</option>
+                      <option value="PHP">PHP</option>
+                      <option value="PKR">PKR</option>
+                      <option value="PLN">PLN</option>
+                      <option value="PYG">PYG</option>
+                      <option value="RON">RON</option>
+                      <option value="RUB">RUB</option>
+                      <option value="SAR">SAR</option>
+                      <option value="SEK">SEK</option>
+                      <option value="SGD">SGD</option>
+                      <option value="THB">THB</option>
+                      <option value="TRY">TRY</option>
+                      <option value="TWD">TWD</option>
+                      <option value="UAH">UAH</option>
+                      <option value="USD">USD</option>
+                      <option value="UYU">UYU</option>
+                      <option value="VND">VND</option>
+                      <option value="ZAR">ZAR</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="moneda_cambio" class="form-label"
+                      >Convertir a</label
+                    >
+                    <select id="moneda_cambio" class="form-select">
+                      <option disabled selected>Seleccione una moneda</option>
+                      <option value="AED">AED</option>
+                      <option value="ARS">ARS</option>
+                      <option value="AUD">AUD</option>
+                      <option value="BGN">BGN</option>
+                      <option value="BRL">BRL</option>
+                      <option value="BSD">BSD</option>
+                      <option value="CAD">CAD</option>
+                      <option value="CHF">CHF</option>
+                      <option value="CLP">CLP</option>
+                      <option value="CNY">CNY</option>
+                      <option value="COP">COP</option>
+                      <option value="CZK">CZK</option>
+                      <option value="DKK">DKK</option>
+                      <option value="DOP">DOP</option>
+                      <option value="EGP">EGP</option>
+                      <option value="EUR">EUR</option>
+                      <option value="FJD">FJD</option>
+                      <option value="GBP">GBP</option>
+                      <option value="GTQ">GTQ</option>
+                      <option value="HKD">HKD</option>
+                      <option value="HRK">HRK</option>
+                      <option value="HUF">HUF</option>
+                      <option value="IDR">IDR</option>
+                      <option value="ILS">ILS</option>
+                      <option value="INR">INR</option>
+                      <option value="ISK">ISK</option>
+                      <option value="JPY">JPY</option>
+                      <option value="KRW">KRW</option>
+                      <option value="KZT">KZT</option>
+                      <option value="MXN">MXN</option>
+                      <option value="MYR">MYR</option>
+                      <option value="NOK">NOK</option>
+                      <option value="NZD">NZD</option>
+                      <option value="PAB">PAB</option>
+                      <option value="PEN">PEN</option>
+                      <option value="PHP">PHP</option>
+                      <option value="PKR">PKR</option>
+                      <option value="PLN">PLN</option>
+                      <option value="PYG">PYG</option>
+                      <option value="RON">RON</option>
+                      <option value="RUB">RUB</option>
+                      <option value="SAR">SAR</option>
+                      <option value="SEK">SEK</option>
+                      <option value="SGD">SGD</option>
+                      <option value="THB">THB</option>
+                      <option value="TRY">TRY</option>
+                      <option value="TWD">TWD</option>
+                      <option value="UAH">UAH</option>
+                      <option value="USD" selected>USD</option>
+                      <option value="UYU">UYU</option>
+                      <option value="VND">VND</option>
+                      <option value="ZAR">ZAR</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label">Resultado:</label>
+                    <input
+                      type="text"
+                      disabled
+                      class="form-control"
+                      id="conversion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="informacion-conversion">
+              <p id="informacion_conversion"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js" type="module"></script>
+    <script>
+      let eventoPrompt;
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        eventoPrompt = e;
+      });
+      const btnInstalar = document.getElementById("instalar");
+      btnInstalar.addEventListener("click", (e) => {
+        btnInstalar.style.display = "none";
+        eventoPrompt.prompt();
+        eventoPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === "accepted") {
+            console.log("El usuario instaló la app");
+          } else {
+            console.log("El usuario rechazó la instalación");
+          }
+          eventoPrompt = null;
+        });
+      });
+
+      // ----------------------- NOTIFICACIONES -------------------------------------
+      let btnNotificaciones = document.getElementById("instalarNotificaciones");
+      btnNotificaciones.addEventListener("click", (e) => {
+        Notification.requestPermission().then((result) => {
+          if (result === "granted") {
+            randomNotificacion();
+          }
+        });
+      });
+      const randomNotificacion = () => {
+        let nTitle = "Titulo notificación";
+        let nBody = "Te invitamos a conocer nuestro contenido de primera mano";
+        let nImage = "./icons/notificaciones.jpg";
+        let options = {
+          body: nBody,
+          icon: nImage,
+        };
+        let notif = new Notification(nTitle, options);
+        setTimeout(randomNotificacion, 10000);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&family=Chakra+Petch&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #06283d;
+  color: #dff6ff;
+  font-family: "Chakra Petch", sans-serif;
+  /* 256D85 */
+  /* 47B5FF */
+}
+.aplicacion {
+  border-right: 5px solid #256d85;
+  height: 220px;
+}
+.form-name {
+  font-size: 20px;
+}
+
+.form-select,
+.form-control {
+  border-radius: 0.1rem;
+}
+.form-select:focus,
+.form-control:focus {
+  border-color: #dff6ff;
+  box-shadow: 0 0 0 0.2rem rgba(223, 246, 255, 0.74);
+}
+
+.alert {
+  transition: all 0.5s ease-in-out;
+  z-index: 1 !important;
+  border-radius: 0 !important;
+}
+.deshabilitar {
+  cursor: none;
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+.icon-svg {
+  color: #47b5ff;
+}
+@media screen and (max-width: 400px) {
+  .col-menor-12 {
+    width: 100%;
+  }
+}

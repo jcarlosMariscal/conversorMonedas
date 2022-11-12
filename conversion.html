@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#086e2a" />
+    <link rel="stylesheet icon" href="icons/icon.png" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script src="app.js"></script>
+    <title>Conversor</title>
+  </head>
+  <body>
+    <main class="mt-5">
+      <div class="container">
+        <section class="row mt-5">
+          <div class="col-6 aplicacion">
+            <div class="title text-center">
+              <h1>Bienvenido!!!</h1>
+            </div>
+            <div class="information">
+              <p class="text-justify">
+                La monedas(divisas) a los que puede convertir sin conexión a
+                internet está límitado, además de que es posible de que para la
+                conversión no se utilizen los tipos de cambios más recientes.
+                Conéctese a internet y acceda a
+                <a href="index.html">Inicio</a> para usar datos actualizados.
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <form>
+              <div class="row">
+                <div class="col-12">
+                  <legend class="form-name">Conversor de moneda</legend>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label">Cantidad</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="0.0"
+                      id="cantidad"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="mi_moneda" class="form-label">Moneda</label>
+                    <select id="mi_moneda" class="form-select">
+                      <option disabled>Seleccione una moneda</option>
+                      <option value="CNY">CNY - Yuan</option>
+                      <option value="EUR">EUR - Euro</option>
+                      <option value="JPY">JPY - Yén</option>
+                      <option value="MXN" selected>MXN</option>
+                      <option value="USD">USD</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="moneda_cambio" class="form-label"
+                      >Convertir a</label
+                    >
+                    <select id="moneda_cambio" class="form-select">
+                      <option disabled>Seleccione una moneda</option>
+                      <option value="CNY">CNY - Yuan</option>
+                      <option value="EUR">EUR - Euro</option>
+                      <option value="JPY">JPY - Yén</option>
+                      <option value="MXN">MXN</option>
+                      <option value="USD" selected>USD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label">Resultado:</label>
+                    <input
+                      type="text"
+                      disabled
+                      class="form-control"
+                      id="conversion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="informacion-conversion">
+              <p id="informacion_conversion"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="conversion.js" type="module"></script>
+  </body>
+</html>
