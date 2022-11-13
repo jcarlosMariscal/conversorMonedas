@@ -9,6 +9,18 @@ body {
   /* 256D85 */
   /* 47B5FF */
 }
+.seccion {
+  background-color: #fff;
+  margin: 30px;
+  padding: 10px;
+  min-height: 500px;
+  border-radius: 5px;
+}
+#instalar {
+  position: fixed;
+  left: 85%;
+  z-index: 999;
+}
 .nav-link,
 .navbar-brand {
   color: #dff6ff;
