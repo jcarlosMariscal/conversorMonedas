@@ -3,11 +3,36 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #06283d;
-  color: #dff6ff;
+  background-color: #dff6ff;
+  color: #06283d;
   font-family: "Chakra Petch", sans-serif;
   /* 256D85 */
   /* 47B5FF */
+}
+.nav-link,
+.navbar-brand {
+  color: #dff6ff;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #e9ecef;
+}
+.bg-color {
+  background-color: rgba(6, 40, 61, 1) !important;
+  /* background-color: #212529 !important; */
+}
+.navbar-color {
+  --bs-navbar-color: rgba(255, 255, 255, 0.55);
+  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.btn-white {
+  color: #dff6ff !important;
 }
 .aplicacion {
   border-right: 5px solid #256d85;
