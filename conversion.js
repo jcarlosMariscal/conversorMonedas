@@ -56,7 +56,48 @@ d.addEventListener("DOMContentLoaded", (e) => {
       });
   };
 
-  moneda_cambio.addEventListener("change", hacerConversion);
-  mi_moneda.addEventListener("change", hacerConversion);
-  cantidad.addEventListener("input", hacerConversion);
+  if (moneda_cambio) moneda_cambio.addEventListener("change", hacerConversion);
+  if (mi_moneda) mi_moneda.addEventListener("change", hacerConversion);
+  if (cantidad) cantidad.addEventListener("input", hacerConversion);
+
+  // ------------------------ BOTÓN DE INSTALACIÓN Y NOTIFICACIONES -------------------
+  let eventoPrompt;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    eventoPrompt = e;
+  });
+  const btnInstalar = document.getElementById("instalar");
+  btnInstalar.addEventListener("click", (e) => {
+    btnInstalar.style.display = "none";
+    eventoPrompt.prompt();
+    eventoPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("El usuario instaló la app");
+      } else {
+        console.log("El usuario rechazó la instalación");
+      }
+      eventoPrompt = null;
+    });
+  });
+
+  // ----------------------- NOTIFICACIONES -------------------------------------
+  let btnNotificaciones = document.getElementById("instalarNotificaciones");
+  btnNotificaciones.addEventListener("click", (e) => {
+    Notification.requestPermission().then((result) => {
+      if (result === "granted") {
+        randomNotificacion();
+      }
+    });
+  });
+  const randomNotificacion = () => {
+    let nTitle = "Titulo notificación";
+    let nBody = "Te invitamos a conocer nuestro contenido de primera mano";
+    let nImage = "./icons/notificaciones.jpg";
+    let options = {
+      body: nBody,
+      icon: nImage,
+    };
+    let notif = new Notification(nTitle, options);
+    setTimeout(randomNotificacion, 10000);
+  };
 });

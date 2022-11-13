@@ -2,10 +2,14 @@ importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js"
 );
 workbox.precaching.precacheAndRoute([
-  "index.html",
   "conversion.html",
+  "conversion.js",
   "offline.html",
   "icons/offline.png",
+  "bd/data.json",
+  "bd/data.json",
+  "css/bootstrap.css",
+  "js/bootstrap.bundle.min.js",
 ]);
 workbox.routing.registerRoute(
   ({ request }) => request.destination === "image",
