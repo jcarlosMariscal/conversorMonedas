@@ -5,11 +5,7 @@ workbox.precaching.precacheAndRoute([
   "conversion.html",
   "conversion.js",
   "offline.html",
-  "icons/offline.png",
   "bd/data.json",
-  "bd/data.json",
-  "css/bootstrap.css",
-  "js/bootstrap.bundle.min.js",
 ]);
 workbox.routing.registerRoute(
   ({ request }) => request.destination === "image",

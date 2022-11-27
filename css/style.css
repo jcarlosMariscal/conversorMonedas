@@ -16,10 +16,20 @@ body {
   min-height: 500px;
   border-radius: 5px;
 }
-#instalar {
+/* #instalar {
   position: fixed;
   left: 85%;
   z-index: 999;
+} */
+.personalizar {
+  position: fixed;
+  left: 78%;
+  top: 10%;
+  z-index: 999;
+  margin-right: 5px;
+  /* background-color: orange; */
+  /* color: white; */
+  /* text-align: center; */
 }
 .nav-link,
 .navbar-brand {

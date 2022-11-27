@@ -64,8 +64,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
     eventoPrompt = e;
   });
   const btnInstalar = document.getElementById("instalar");
+  const msjPersonalizado = document.getElementById("msjPersonalizado");
   btnInstalar.addEventListener("click", (e) => {
-    btnInstalar.style.display = "none";
+    msjPersonalizado.style.display = "none";
     eventoPrompt.prompt();
     eventoPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === "accepted") {
