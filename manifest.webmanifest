@@ -44,7 +44,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/conversorMonedas/index.html",
+  "start_url": "https://conversormonedasjc.netlify.app/index.html",
   "display": "fullscreen",
   "theme_color": "#086e2a",
   "background_color": "#086e2a"
