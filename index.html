@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="manifest" href="manifest.webmanifest" />
     <script src="app.js"></script>
+    <script
+      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+      async=""
+    ></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+        OneSignal.init({
+          appId: "bd5c7af6-3762-42f3-aacf-a68f41cef1d5",
+        });
+      });
+    </script>
     <title>Conversor</title>
   </head>
   <body>
