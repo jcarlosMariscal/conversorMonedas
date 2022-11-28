@@ -436,3 +436,35 @@ body {
 .widget-49 .widget-49-meeting-action a {
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 1000px) {
+  .personalizar {
+    /* position: fixed; */
+    left: 60%;
+    top: 10%;
+    z-index: 999;
+    margin-right: 5px;
+    /* background-color: orange; */
+    /* color: white; */
+    /* text-align: center; */
+  }
+}
+@media screen and (max-width: 768px) {
+  .aplicacion {
+    border-right: none;
+    border-bottom: 5px solid #256d85;
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .personalizar {
+    left: 60%;
+    top: 10%;
+    font-size: 14px;
+    z-index: 999;
+    margin-right: 0px;
+  }
+  .instalarMsj {
+    display: none;
+  }
+}

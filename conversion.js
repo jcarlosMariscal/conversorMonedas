@@ -81,23 +81,23 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
 
   // ----------------------- NOTIFICACIONES -------------------------------------
-  let btnNotificaciones = document.getElementById("instalarNotificaciones");
-  btnNotificaciones.addEventListener("click", (e) => {
-    Notification.requestPermission().then((result) => {
-      if (result === "granted") {
-        randomNotificacion();
-      }
-    });
-  });
-  const randomNotificacion = () => {
-    let nTitle = "Titulo notificación";
-    let nBody = "Te invitamos a conocer nuestro contenido de primera mano";
-    let nImage = "./icons/notificaciones.jpg";
-    let options = {
-      body: nBody,
-      icon: nImage,
-    };
-    let notif = new Notification(nTitle, options);
-    setTimeout(randomNotificacion, 10000);
-  };
+  // let btnNotificaciones = document.getElementById("instalarNotificaciones");
+  // btnNotificaciones.addEventListener("click", (e) => {
+  //   Notification.requestPermission().then((result) => {
+  //     if (result === "granted") {
+  //       randomNotificacion();
+  //     }
+  //   });
+  // });
+  // const randomNotificacion = () => {
+  //   let nTitle = "Titulo notificación";
+  //   let nBody = "Te invitamos a conocer nuestro contenido de primera mano";
+  //   let nImage = "./icons/notificaciones.jpg";
+  //   let options = {
+  //     body: nBody,
+  //     icon: nImage,
+  //   };
+  //   let notif = new Notification(nTitle, options);
+  //   setTimeout(randomNotificacion, 10000);
+  // };
 });
