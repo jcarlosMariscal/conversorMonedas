@@ -24,7 +24,8 @@
       };
       OneSignal.push(function () {
         OneSignal.SERVICE_WORKER_PARAM = { scope: "/onesignal/" };
-        OneSignal.SERVICE_WORKER_PATH = "onesignal/OneSignalSDKWorker.js";
+        OneSignal.SERVICE_WORKER_PATH =
+          "https://conversormonedasjc.netlify.app/index.html/onesignal/OneSignalSDKWorker.js";
         OneSignal.init(initConfig);
       });
       // window.OneSignal = window.OneSignal || [];
