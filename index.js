@@ -65,11 +65,17 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
   const btnInstalar = document.getElementById("instalar");
   const msjPersonalizado = document.getElementById("msjPersonalizado");
+  const verificarInstalación = localStorage.getItem("instalado");
+  if (verificarInstalación) {
+    msjPersonalizado.style.display = "none";
+    return;
+  }
   btnInstalar.addEventListener("click", (e) => {
     msjPersonalizado.style.display = "none";
     eventoPrompt.prompt();
     eventoPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === "accepted") {
+        localStorage.setItem("instalado", true);
         console.log("El usuario instaló la app");
       } else {
         console.log("El usuario rechazó la instalación");
