@@ -1,6 +1,11 @@
 const d = document;
 const w = window;
 d.addEventListener("DOMContentLoaded", (e) => {
+  const verificarInstalación = localStorage.getItem("instalado");
+  if (verificarInstalación) {
+    msjPersonalizado.style.display = "none";
+    return;
+  }
   const cantidad = d.getElementById("cantidad");
   const mi_moneda = d.getElementById("mi_moneda");
   const moneda_cambio = d.getElementById("moneda_cambio");
@@ -65,11 +70,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
   const btnInstalar = document.getElementById("instalar");
   const msjPersonalizado = document.getElementById("msjPersonalizado");
-  const verificarInstalación = localStorage.getItem("instalado");
-  if (verificarInstalación) {
-    msjPersonalizado.style.display = "none";
-    return;
-  }
   btnInstalar.addEventListener("click", (e) => {
     msjPersonalizado.style.display = "none";
     eventoPrompt.prompt();
