@@ -1,6 +1,11 @@
 const d = document;
 const w = window;
 d.addEventListener("DOMContentLoaded", (e) => {
+  const verificarInstalación = localStorage.getItem("instalado");
+  if (verificarInstalación) {
+    msjPersonalizado.style.display = "none";
+    return;
+  }
   const cantidad = d.getElementById("cantidad");
   const mi_moneda = d.getElementById("mi_moneda");
   const moneda_cambio = d.getElementById("moneda_cambio");
@@ -72,6 +77,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     eventoPrompt.prompt();
     eventoPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === "accepted") {
+        localStorage.setItem("instalado", true);
         console.log("El usuario instaló la app");
       } else {
         console.log("El usuario rechazó la instalación");
