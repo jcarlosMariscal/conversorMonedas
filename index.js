@@ -1,6 +1,7 @@
 const d = document;
 const w = window;
 d.addEventListener("DOMContentLoaded", (e) => {
+  const msjPersonalizado = document.getElementById("msjPersonalizado");
   const verificarInstalación = localStorage.getItem("instalado");
   if (verificarInstalación) {
     msjPersonalizado.style.display = "none";
@@ -63,7 +64,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   if (cantidad) cantidad.addEventListener("input", hacerConversion);
 
   // ------------------------ BOTÓN DE INSTALACIÓN Y NOTIFICACIONES -------------------
-  const msjPersonalizado = document.getElementById("msjPersonalizado");
   const btnInstalar = document.getElementById("instalar");
   const cerrarMsj = document.getElementById("cerrarMsj");
   cerrarMsj.addEventListener("click", (e) => {
