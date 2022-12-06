@@ -70,8 +70,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
   const btnInstalar = document.getElementById("instalar");
   const cerrarMsj = document.getElementById("cerrarMsj");
   cerrarMsj.addEventListener("click", (e) => {
+    msjPersonalizado.style.display = "none";
     e.preventDefault();
-    msjPersonalizado.classList.add("ocultar");
+    // msjPersonalizado.classList.add("ocultar");
   });
   let eventoPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
