@@ -63,13 +63,18 @@ d.addEventListener("DOMContentLoaded", (e) => {
   if (cantidad) cantidad.addEventListener("input", hacerConversion);
 
   // ------------------------ BOTÓN DE INSTALACIÓN Y NOTIFICACIONES -------------------
+  const msjPersonalizado = document.getElementById("msjPersonalizado");
+  const btnInstalar = document.getElementById("instalar");
+  const cerrarMsj = document.getElementById("cerrarMsj");
+  cerrarMsj.addEventListener("click", (e) => {
+    e.preventDefault();
+    msjPersonalizado.classList.add("ocultar");
+  });
   let eventoPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     eventoPrompt = e;
   });
-  const btnInstalar = document.getElementById("instalar");
-  const msjPersonalizado = document.getElementById("msjPersonalizado");
   btnInstalar.addEventListener("click", (e) => {
     msjPersonalizado.style.display = "none";
     eventoPrompt.prompt();

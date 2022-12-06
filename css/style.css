@@ -21,15 +21,65 @@ body {
   left: 85%;
   z-index: 999;
 } */
+.container-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
 .personalizar {
   position: fixed;
   left: 78%;
   top: 10%;
   z-index: 999;
   margin-right: 5px;
-  /* background-color: orange; */
-  /* color: white; */
-  /* text-align: center; */
+}
+#msjPersonalizado {
+  background-color: #47b5ff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.instalar-app {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* align-content: center; */
+  /* justify-items: center; */
+  /* justify-content: center; */
+  /* background-color: aqua; */
+}
+.instalar-app p {
+  margin-top: 15px;
+}
+.cerrarMsj {
+  width: 40px;
+  height: 30px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.cerrarMsj img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-instalar {
+  margin-left: 20px;
+  background-color: #256d85;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #e9ecef;
+}
+.ocultar {
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+.btn-instalar:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: #06283d;
+  color: #e9ecef;
 }
 .nav-link,
 .navbar-brand {
