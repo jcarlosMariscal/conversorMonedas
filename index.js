@@ -68,7 +68,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   const cerrarMsj = document.getElementById("cerrarMsj");
   cerrarMsj.addEventListener("click", (e) => {
     e.preventDefault();
-    msjPersonalizado.classList.add("ocultar");
+    msjPersonalizado.style.display = "none";
   });
   let eventoPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
