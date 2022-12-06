@@ -11,6 +11,7 @@ workbox.precaching.precacheAndRoute([
   "css/style.css",
   "js/bootstrap.bundle.min.js ",
   "icons/icon.png",
+  "icons/cerrar.png",
 ]);
 workbox.routing.registerRoute(
   ({ request }) => request.destination === "image",
